@@ -30,3 +30,14 @@ print(lang[:6])
 print(lang[0:6:5]) 
 '''字串反轉'''
 print(lang[::-1]) 
+print('%d %.3f %s' % (1, 99.2, 'Justin'))
+'''字串替換---舊式寫法'''
+print('%(real)s is %(nick)s' % {'real':'Justin', 'nick':'caterpillar'})
+print('%(osx)s is %(Mac System)s' % {'osx':'win7', 'Mac System':'Windows System'})
+'''字串替換---format寫法'''
+print'{0} is {1}'.format('Justin', 'caterpillar')
+print'{real} is {nick}'.format(real = 'Justin', nick = 'caterpillar')
+print'{0} is {nick}'.format('Justin', nick = 'caterpillar')
+import sys
+print('My platform is {pc.platform}'.format(pc = sys))
+
