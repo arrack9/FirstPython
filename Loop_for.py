@@ -20,15 +20,18 @@ print odd_numbers
 '''不需在將list做完4次方運算存放在宣告的numlist內即可印出'''
 print [num ** 4 for num in numbers]
 print [number for number in numbers if number % 2 != 0]  
+
 '''for 包含式（comprehension）也可以形式巢狀結構，
         例如有個元素都為 list 的 list，想將其中的 list 元素串起來，也就是將之平坦化，可以如下：'''
 lts = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print [ele for lt in lts for ele in lt]
 abs = [(21, 23, 45), (11, 24, 18), (98, 23, 12)]
 print [aaa for aa in abs for aaa in aa]
+
 '''當你使用 [] 包圍住 for 包含式（comprehension） 時，會建立 list 實例，
        如果使用 {} 的話，可以建立 set 實例，重複的元素會自動去除。例如：'''
 print {name for name in ['Justin', 'caterpillar', 'caterpillar', 'openhome']}
+
 '''也可以建立 dict 實例。
        例如：下例中的 zip 函式，就如名稱意義，會將兩個 list 像拉鏈一樣，兩兩相扣在一起為 tuple，
        這些 tuple 元素組成一個新的 list，對於 tuple 元素組成的這個 list，
@@ -39,3 +42,10 @@ print{name : passwd for name, passwd in zip(names, passwds)}
 transport = ['bus', 'miniVan', 'taxi', 'tutu', 'bicycle', 'motorcycle', 'airplane']
 carnumber = [166, 891, 233, 559, 201, 888, 999]
 print{trans : number for trans, number in zip(transport, carnumber)}
+days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+color = ['blue', 'red', 'green', 'purple', 'yellow', 'pink', 'orange']
+print{week : col for week, col in zip(days, color)}
+numbers = []
+for number in range(20):
+    numbers.append(str(number))
+print ", ".join(numbers)
