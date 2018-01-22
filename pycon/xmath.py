@@ -1,16 +1,16 @@
 #C:Python31python.exe  
 # -*- coding:utf-8 -*- 
 '''
-Created on 2018年1月18日
+Created on 2018�~1��18��
 
 @author: Pingyao.Chen
 '''
-def xmax(a, b):
+def max(a, b):
     return a if a > b else b
-def xmin(a, b):
+def min(a, b):
     return a if a < b else b
 
-def xsum(*numbers): # numbers 接受可變長度引數
+def suma(*numbers): # numbers 接受可變長度引數
     total = 0
     for number in numbers:
         total += number
@@ -18,4 +18,3 @@ def xsum(*numbers): # numbers 接受可變長度引數
 
 pi = 3.141592653589793
 e = 2.718281828459045
-    

@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//pycon/bank.py=utf-8
+encoding//pycon/xmath.py=utf-8
 encoding/Container_arrayWITHtuple.py=utf-8
 encoding/Container_dict.py=utf-8
 encoding/Container_list.py=utf-8
@@ -9,5 +11,6 @@ encoding/Programming_importclassbank.py=utf-8
 encoding/Programming_importmoduMath.py=utf-8
 encoding/Programming_importmodubank.py=utf-8
 encoding/bank.py=utf-8
+encoding/main.py=utf-8
 encoding/module_bank.py=utf-8
 encoding/module_xmath.py=utf-8
