@@ -9,7 +9,7 @@ while index < len(names):
     print '%d %s' % (index, names[index])
     index += 1
     
-''' python enumerate'''
+'''python enumerate'''
 favorites = ['Chocalate', 'Coffee', 'Whisky', 'Red Wine', 'Cheese']
 item = 0
 for item, element in enumerate(favorites):
