@@ -33,8 +33,54 @@ print(f(4))
 print(f(5))
 
 '''
-array[], dict{}, tuple()
+list[], dict{}, tuple()
 '''
-nlist = ()
-calsum = lambda nlist: nlist+100
+
+alist = []
+blist = [1,2,3,4]
+bdict = {}
+ddict = {"Mary":1234, "Mark":9999, "Kathy":7777}
+ctuple = ()
+
+callist = lambda alist: alist + blist
+print callist([23,11,21,44])
+
+caldict = lambda bdict: bdict.viewvalues()
+print caldict({"Derek":1234, "Jeff":9012, "Kevin":5678})
+
+print reduce(lambda calsum, elem: calsum + elem, [1, 2, 3, 4, 5], 0)   
+
+# reduce(add, [1,2,3,4,5],0)
+
+def ascending(a, b): return a - b
+def descending(a, b): return -ascending(a, b)
+print ascending(15, 12)
+print descending(15, 12)
+
+# selection sort
+def s_sorted(xs, compare = ascending):
+    print xs
+    return [] if not xs else __select(xs, compare)
+
+
+def __select(xs, compare):
+    selected = xs[0]
+    for elem in xs[1:]:
+        if compare(elem, selected) < 0:
+            print 'elem:' + str(elem)
+            print 'selected:' + str(selected)
+            selected = elem
+        
+    remain = []
+    selected_list = []
+    for elem in xs:
+        if elem != selected:
+            remain.append(elem)
+        else:
+            selected_list.append(elem)
+            
+    return xs if not remain else selected_list + __select(remain, compare)
+
+print s_sorted([2, 1, 3, 6, 5])
+print s_sorted([2, 1, 3, 6, 5], descending)
 
